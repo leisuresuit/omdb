@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/animeSearch">
+    <fragment
+        android:id="@+id/animeSearch"
+        android:name="com.sample.kitsu.search.AnimeSearchFragment"
+        android:label="AnimeSearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_animeSearchFragment_to_animeDetailsFragment"
+            app:destination="@id/animeDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/animeDetails"
+        android:name="com.sample.kitsu.details.AnimeDetailsFragment"
+        android:label="fragment_anime_details"
+        tools:layout="@layout/fragment_anime_details">
+        <argument
+            android:name="animeId"
+            app:argType="string" />
+    </fragment>
+</navigation>
